@@ -1,7 +1,12 @@
 def searchPrefix(arr,s)
+    arr.select { |item| item.start_with?(s) }
 
 end
 
-print(searchPrefix(["abcde", "abdf", "adeab", "abdgse", "bdefa", "bacdef"],"ab"))
+puts "Enter array elements separated by spaces:"
+a = gets.chomp.split(" ")
 
-print(searchPrefix(["abcde", "abdf", "adeab", "abdgse", "bdefa", "bacdef"],"b"))
+puts "Enter prefix:"
+prefix = gets.chomp
+puts "Elements:"
+puts searchPrefix(a, prefix)
